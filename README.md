@@ -20,7 +20,7 @@ cd chatbot
 
 To use the Google Generative AI (Gemini) model, you will need to obtain an API key. Follow these steps to get your key:
 
-    [Click here to obtain your GEMINI API Key](https://aistudio.google.com/app/apikey)
+[Click here to obtain your GEMINI API Key : https://aistudio.google.com/app/apikey
 
     login with your google account .
 
