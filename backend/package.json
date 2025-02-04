@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nodemon app.js"
   },
+  "type":"module",
   "author": "",
   "license": "ISC",
   "description": "",
