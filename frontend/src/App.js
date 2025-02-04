@@ -11,14 +11,14 @@ const messsages = [];
 const Message =({role, message, index}) =>{
   const[messi, setMessi] = useState('')
   useEffect (()=>{
-    if( role === 'AI' && index == messsages.length -1 )
-    [...message].map((e,index) =>{
-        setTimeout(() =>{
-        setMessi(message.substr(0,index+1))
-      },50*index)
-    })
-    else 
-      setMessi(message)
+    if (role === "AI" && index === messsages.length - 1)
+      [...message].forEach((e, index) => {
+        setTimeout(() => {
+          setMessi(message.substr(0, index + 1));
+        }, 50 * index);
+      });
+    else setMessi(message);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
   
 
@@ -56,7 +56,9 @@ const Message =({role, message, index}) =>{
     setInput("")
     try{
 
-      const response = await axios.post("http://127.0.0.1:5001/ask", { content: input });
+      const response = await axios.post("http://127.0.0.1:5001/ask", {
+        content: input,
+      });
          messsages.push({role:"AI",content:response.data})
     }catch(e){
       messsages.push({role:"AI",content:"error"})
